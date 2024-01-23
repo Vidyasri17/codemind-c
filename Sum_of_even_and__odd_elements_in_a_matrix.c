@@ -1,24 +1,19 @@
 #include<stdio.h>
 int main()
 {
-    int m,n;
+    int m,n,i,j,e=0,o=0;
     scanf("%d %d",&m,&n);
-    int even=0,odd=0;
     int mat[m][n];
-    for(int i = 1 ; i <= m ; i++)
+    for( i = 0 ; i < m ; i++)
     {
-        for(int j = 1 ; j <= n ; j++)
+        for( j = 0 ; j < n ; j++)
         {
             scanf("%d",&mat[i][j]);
             if(mat[i][j]%2==0)
-            {
-                even = even + mat[i][j];
-            }
+            e = e + mat[i][j];
             else
-            {
-                odd = odd + mat[i][j];
-            }
+            o = o + mat[i][j];
         }
     }
-    printf("%d %d",even ,odd);
+    printf("%d %d",e,o);
 }
